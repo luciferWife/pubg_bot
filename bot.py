@@ -7,7 +7,9 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from config import API_TOKEN, ADMIN_CHAT_ID
 from database import register_team
 
-bot = Bot(token=API_TOKEN, parse_mode="Markdown")
+from aiogram.client.default import DefaultBotProperties
+
+bot = Bot(token=API_TOKEN, default=DefaultBotProperties(parse_mode="Markdown"))
 dp = Dispatcher(storage=MemoryStorage())
 
 # Главное меню
