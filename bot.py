@@ -8,8 +8,7 @@ from config import API_TOKEN, ADMIN_CHAT_ID
 from database import register_team
 
 from aiogram.client.default import DefaultBotProperties
-
-bot = Bot(token=API_TOKEN, default=DefaultBotProperties(parse_mode="Markdown"))
+bot = Bot(token=API_TOKEN, default=DefaultBotProperties(parse_mode="Markdown")) # Обновлённый код для Render
 dp = Dispatcher(storage=MemoryStorage())
 
 # Главное меню
